@@ -6,14 +6,29 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
-class ViewController: UIViewController {
+class RegistrationViewController: UIViewController {
 
+    var ref: DatabaseReference!
+    var authStateDidChangeListenerHandle: AuthStateDidChangeListenerHandle!
+    
+    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
 
+    @IBAction func signInButton(_ sender: UIButton) {
+    }
+    @IBAction func signUpButton(_ sender: UIButton) {
+    }
+    
 }
 
