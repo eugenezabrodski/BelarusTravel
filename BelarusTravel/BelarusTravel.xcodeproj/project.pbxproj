@@ -19,6 +19,7 @@
 		AF15972C29892065006B65B5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AF15972B29892065006B65B5 /* FirebaseAuth */; };
 		AF15972E29892065006B65B5 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = AF15972D29892065006B65B5 /* FirebaseDatabase */; };
 		AF15973029892065006B65B5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = AF15972F29892065006B65B5 /* FirebaseStorage */; };
+		AF56566A298ADB4F00A53F6D /* RegionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF565669298ADB4F00A53F6D /* RegionTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		AF15971B2988FB10006B65B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF15971D2988FB10006B65B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF15972629891F7D006B65B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AF565669298ADB4F00A53F6D /* RegionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +79,9 @@
 			isa = PBXGroup;
 			children = (
 				AF0E0895298936B9006DB3AF /* Models */,
-				AF1597242988FB8F006B65B5 /* Delegates */,
-				AF1597252988FBA9006B65B5 /* Controllers */,
 				AF1597232988FB7C006B65B5 /* Views */,
+				AF1597252988FBA9006B65B5 /* Controllers */,
+				AF1597242988FB8F006B65B5 /* Delegates */,
 				AF1597182988FB10006B65B5 /* Assets.xcassets */,
 				AF15971D2988FB10006B65B5 /* Info.plist */,
 				AF15972629891F7D006B65B5 /* GoogleService-Info.plist */,
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				AF1597132988FB0A006B65B5 /* ViewController.swift */,
+				AF565669298ADB4F00A53F6D /* RegionTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				AF1597102988FB0A006B65B5 /* AppDelegate.swift in Sources */,
 				AF0E0897298936FA006DB3AF /* UsersModel.swift in Sources */,
 				AF1597122988FB0A006B65B5 /* SceneDelegate.swift in Sources */,
+				AF56566A298ADB4F00A53F6D /* RegionTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
