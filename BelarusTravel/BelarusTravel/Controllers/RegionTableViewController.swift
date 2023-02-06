@@ -10,15 +10,23 @@ import Firebase
 import FirebaseStorage
 
 class RegionTableViewController: UITableViewController {
-
+    
+    var arrayOfRegion = [Region]()
+    let headerID = String(describing: CustomHeaderView.self)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        tableViewConfig()
+        tableView.backgroundView = UIImageView(image: #imageLiteral(resourceName: "backgroundViewTableView.png"))
+        arrayOfRegion = [
+            Region(region: "Бресткая область", typeTravel: ["архитектура", "природа", "музеи"], isExpanded: false),
+            Region(region: "Минская область", typeTravel: ["архитектура", "природа", "музеи"], isExpanded: false),
+            Region(region: "Витебская область", typeTravel: ["архитектура", "природа", "музеи"], isExpanded: false),
+            Region(region: "Гомельская область", typeTravel: ["архитектура", "природа", "музеи"], isExpanded: false),
+            Region(region: "Гродненская область", typeTravel: ["архитектура", "природа", "музеи"], isExpanded: false),
+            Region(region: "Могилевская область", typeTravel: ["архитектура", "природа", "музеи"], isExpanded: false)
+        ]
+         
     }
     
     @IBAction func logOut(_ sender: UIBarButtonItem) {
@@ -35,58 +43,44 @@ class RegionTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        arrayOfRegion.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        if !arrayOfRegion[section].isExpanded {
+                    return 0
+                }
+                
+        return arrayOfRegion[section].typeTravel.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = arrayOfRegion[indexPath.section].typeTravel[indexPath.row]
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerID) as! CustomHeaderView
+        header.configure(title: arrayOfRegion[section].region, section: section)
+        header.rotateImage(arrayOfRegion[section].isExpanded)
+        header.delegate = self
+        return header
+        }
+        
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+            return 60
+        }
+    
+    
+    private func tableViewConfig() {
+            let nib = UINib(nibName: headerID, bundle: nil)
+            tableView.register(nib, forHeaderFooterViewReuseIdentifier: headerID)
+            tableView.tableFooterView = UIView()
+        }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     /*
     // MARK: - Navigation
@@ -98,4 +92,15 @@ class RegionTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension RegionTableViewController: HeaderViewDelegate {
+func expandedSection(button: UIButton) {
+let section = button.tag
+
+let isExpanded = arrayOfRegion[section].isExpanded
+    arrayOfRegion[section].isExpanded = !isExpanded
+
+tableView.reloadSections(IndexSet(integer: section), with: .automatic)
+}
 }

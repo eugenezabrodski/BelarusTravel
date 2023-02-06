@@ -20,6 +20,9 @@
 		AF15972E29892065006B65B5 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = AF15972D29892065006B65B5 /* FirebaseDatabase */; };
 		AF15973029892065006B65B5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = AF15972F29892065006B65B5 /* FirebaseStorage */; };
 		AF56566A298ADB4F00A53F6D /* RegionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF565669298ADB4F00A53F6D /* RegionTableViewController.swift */; };
+		AFBF1D302991730F00ADE281 /* RegionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBF1D2F2991730F00ADE281 /* RegionModel.swift */; };
+		AFBF1D3A299181ED00ADE281 /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBF1D39299181ED00ADE281 /* CustomHeaderView.swift */; };
+		AFBF1D3E2991A71F00ADE281 /* CustomHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBF1D3D2991A71F00ADE281 /* CustomHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		AF15971D2988FB10006B65B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF15972629891F7D006B65B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AF565669298ADB4F00A53F6D /* RegionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionTableViewController.swift; sourceTree = "<group>"; };
+		AFBF1D2F2991730F00ADE281 /* RegionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionModel.swift; sourceTree = "<group>"; };
+		AFBF1D39299181ED00ADE281 /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
+		AFBF1D3D2991A71F00ADE281 /* CustomHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				AF0E0896298936FA006DB3AF /* UsersModel.swift */,
+				AFBF1D2F2991730F00ADE281 /* RegionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -78,6 +85,7 @@
 		AF15970E2988FB0A006B65B5 /* BelarusTravel */ = {
 			isa = PBXGroup;
 			children = (
+				AFBF1D362991803200ADE281 /* CustomSection */,
 				AF0E0895298936B9006DB3AF /* Models */,
 				AF1597232988FB7C006B65B5 /* Views */,
 				AF1597252988FBA9006B65B5 /* Controllers */,
@@ -114,6 +122,15 @@
 				AF565669298ADB4F00A53F6D /* RegionTableViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AFBF1D362991803200ADE281 /* CustomSection */ = {
+			isa = PBXGroup;
+			children = (
+				AFBF1D39299181ED00ADE281 /* CustomHeaderView.swift */,
+				AFBF1D3D2991A71F00ADE281 /* CustomHeaderView.xib */,
+			);
+			path = CustomSection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFBF1D3E2991A71F00ADE281 /* CustomHeaderView.xib in Resources */,
 				AF15971C2988FB10006B65B5 /* LaunchScreen.storyboard in Resources */,
 				AF15972729891F7D006B65B5 /* GoogleService-Info.plist in Resources */,
 				AF1597192988FB10006B65B5 /* Assets.xcassets in Resources */,
@@ -198,6 +216,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF1597142988FB0A006B65B5 /* ViewController.swift in Sources */,
+				AFBF1D3A299181ED00ADE281 /* CustomHeaderView.swift in Sources */,
+				AFBF1D302991730F00ADE281 /* RegionModel.swift in Sources */,
 				AF1597102988FB0A006B65B5 /* AppDelegate.swift in Sources */,
 				AF0E0897298936FA006DB3AF /* UsersModel.swift in Sources */,
 				AF1597122988FB0A006B65B5 /* SceneDelegate.swift in Sources */,
