@@ -85,10 +85,10 @@
 		AF15970E2988FB0A006B65B5 /* BelarusTravel */ = {
 			isa = PBXGroup;
 			children = (
-				AFBF1D362991803200ADE281 /* CustomSection */,
 				AF0E0895298936B9006DB3AF /* Models */,
 				AF1597232988FB7C006B65B5 /* Views */,
 				AF1597252988FBA9006B65B5 /* Controllers */,
+				AFBF1D362991803200ADE281 /* CustomSection */,
 				AF1597242988FB8F006B65B5 /* Delegates */,
 				AF1597182988FB10006B65B5 /* Assets.xcassets */,
 				AF15971D2988FB10006B65B5 /* Info.plist */,
