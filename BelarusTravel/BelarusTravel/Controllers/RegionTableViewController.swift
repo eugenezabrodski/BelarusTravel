@@ -42,7 +42,6 @@ class RegionTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         arrayOfRegion.count
     }
 
@@ -50,7 +49,6 @@ class RegionTableViewController: UITableViewController {
         if !arrayOfRegion[section].isExpanded {
                     return 0
                 }
-                
         return arrayOfRegion[section].typeTravel.count
     }
 
@@ -58,11 +56,11 @@ class RegionTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = arrayOfRegion[indexPath.section].typeTravel[indexPath.row]
+        cell.backgroundView = UIImageView(image: #imageLiteral(resourceName: "backgroundViewTableView.png"))
         return cell
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerID) as! CustomHeaderView
         header.configure(title: arrayOfRegion[section].region, section: section)
         header.rotateImage(arrayOfRegion[section].isExpanded)
