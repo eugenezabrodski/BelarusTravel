@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol HeaderViewDelegate: class {
+protocol HeaderViewDelegate: AnyObject {
     func expandedSection(button: UIButton)
 }
 

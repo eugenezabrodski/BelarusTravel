@@ -17,7 +17,7 @@ class RegionTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewConfig()
-        tableView.backgroundView = UIImageView(image: #imageLiteral(resourceName: "backgroundViewTableView.png"))
+        tableView.backgroundView = UIImageView(image: #imageLiteral(resourceName: "MEANWHILE"))
         arrayOfRegion = [
             Region(region: "Бресткая область", typeTravel: ["архитектура", "природа", "музеи"], isExpanded: false),
             Region(region: "Минская область", typeTravel: ["архитектура", "природа", "музеи"], isExpanded: false),
@@ -56,7 +56,7 @@ class RegionTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = arrayOfRegion[indexPath.section].typeTravel[indexPath.row]
-        cell.backgroundView = UIImageView(image: #imageLiteral(resourceName: "backgroundViewTableView.png"))
+        cell.backgroundView = UIImageView(image: #imageLiteral(resourceName: "backgroundcell"))
         return cell
     }
     
