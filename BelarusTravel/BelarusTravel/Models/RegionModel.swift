@@ -10,12 +10,31 @@ import UIKit
 struct Region: Codable {
     var regionId: Int
     var nameRegion: String?
-    var typeId: String?
-    var placeId: String?
+    var isExpanded: Bool?
+    var travelType: TravelType?
+}
+
+struct TravelType: Codable {
+    var categoriesType: CategoriesType?
+}
+
+struct CategoriesType: Codable {
+    var categoriesId: Int
+    var nameType: String?
+    var typeId: TypeId?
+}
+
+struct TypeId: Codable {
+    var nature: PlaceId?
+    var architecture: PlaceId?
+    var museum: PlaceId?
+}
+
+struct PlaceId: Codable {
+    var namePlace: String?
     var text: String?
     var coordinates: Coordinates?
     var photoURL: String?
-    var isExpanded: Bool?
 }
 
 struct Coordinates: Codable {
