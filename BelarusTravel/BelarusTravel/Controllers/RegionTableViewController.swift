@@ -42,13 +42,15 @@ class RegionTableViewController: UITableViewController {
         if !regions[section].isExpanded! {
                     return 0
                 }
-        return regions[section].travelType!.categoriesType!.categoriesId
+        return regions[section].travelType.count
+        //return regions[section].travelType.categoriesType!.categoriesId
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = regions[indexPath.section].travelType?.categoriesType?.nameType
+        cell.textLabel?.text = regions[indexPath.section].travelType[indexPath.row]?.categoriesType?.nameType
+        //cell.textLabel?.text = regions[indexPath.section].travelType?.categoriesType?.nameType
         cell.backgroundView = UIImageView(image: #imageLiteral(resourceName: "backgroundcell"))
         return cell
     }

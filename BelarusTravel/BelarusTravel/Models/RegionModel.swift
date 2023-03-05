@@ -11,7 +11,7 @@ struct Region: Codable {
     var regionId: Int
     var nameRegion: String?
     var isExpanded: Bool?
-    var travelType: TravelType?
+    var travelType: [TravelType?]
 }
 
 struct TravelType: Codable {
