@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630ED1F929B64FBB00A57C6F /* TravelTypeCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630ED1F829B64FBB00A57C6F /* TravelTypeCVC.swift */; };
+		630ED1FC29B6555500A57C6F /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630ED1FB29B6555500A57C6F /* CustomCollectionViewCell.swift */; };
 		AF0E0897298936FA006DB3AF /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0E0896298936FA006DB3AF /* UsersModel.swift */; };
 		AF1597102988FB0A006B65B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF15970F2988FB0A006B65B5 /* AppDelegate.swift */; };
 		AF1597122988FB0A006B65B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1597112988FB0A006B65B5 /* SceneDelegate.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		630ED1F829B64FBB00A57C6F /* TravelTypeCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTypeCVC.swift; sourceTree = "<group>"; };
+		630ED1FB29B6555500A57C6F /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		AF0E0896298936FA006DB3AF /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
 		AF15970C2988FB0A006B65B5 /* BelarusTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BelarusTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF15970F2988FB0A006B65B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		630ED1FA29B6550900A57C6F /* CustomCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				630ED1FB29B6555500A57C6F /* CustomCollectionViewCell.swift */,
+			);
+			path = CustomCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		AF0E0895298936B9006DB3AF /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +100,7 @@
 				AF0E0895298936B9006DB3AF /* Models */,
 				AF1597232988FB7C006B65B5 /* Views */,
 				AF1597252988FBA9006B65B5 /* Controllers */,
+				630ED1FA29B6550900A57C6F /* CustomCollectionViewCell */,
 				AFBF1D362991803200ADE281 /* CustomSection */,
 				AF1597242988FB8F006B65B5 /* Delegates */,
 				AF1597182988FB10006B65B5 /* Assets.xcassets */,
@@ -120,6 +133,7 @@
 			children = (
 				AF1597132988FB0A006B65B5 /* ViewController.swift */,
 				AF565669298ADB4F00A53F6D /* RegionTableViewController.swift */,
+				630ED1F829B64FBB00A57C6F /* TravelTypeCVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -216,7 +230,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF1597142988FB0A006B65B5 /* ViewController.swift in Sources */,
+				630ED1FC29B6555500A57C6F /* CustomCollectionViewCell.swift in Sources */,
 				AFBF1D3A299181ED00ADE281 /* CustomHeaderView.swift in Sources */,
+				630ED1F929B64FBB00A57C6F /* TravelTypeCVC.swift in Sources */,
 				AFBF1D302991730F00ADE281 /* RegionModel.swift in Sources */,
 				AF1597102988FB0A006B65B5 /* AppDelegate.swift in Sources */,
 				AF0E0897298936FA006DB3AF /* UsersModel.swift in Sources */,

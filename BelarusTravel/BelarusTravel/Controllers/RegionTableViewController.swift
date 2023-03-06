@@ -18,6 +18,7 @@ class RegionTableViewController: UITableViewController {
         super.viewDidLoad()
         fetchUsers()
         tableViewConfig()
+        // сделай setUpUI
         tableView.backgroundView = UIImageView(image: #imageLiteral(resourceName: "MEANWHILE"))
          
     }
@@ -62,9 +63,19 @@ class RegionTableViewController: UITableViewController {
         header.delegate = self
         return header
         }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let region = regions[indexPath.row]
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "TravelTypeCVC") as! TravelTypeCVC
+        vc.region = region
+        navigationController?.pushViewController(vc, animated: true)
+        // Задать вопрос про тайп айди
+    }
         
+    //поиграйся с размерами
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-            return 60
+            return 80
         }
     
     
@@ -74,8 +85,9 @@ class RegionTableViewController: UITableViewController {
             tableView.tableFooterView = UIView()
         }
 
-    
+    // вынести в отдельный сервис
     private func fetchUsers() {
+        //сделать апи констант
         guard let url = URL(string: "http://localhost:3000/travel") else { return }
 
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
@@ -97,15 +109,7 @@ class RegionTableViewController: UITableViewController {
         task.resume()
     }
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
