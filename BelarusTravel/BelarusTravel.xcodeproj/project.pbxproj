@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		630ED1F929B64FBB00A57C6F /* TravelTypeCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630ED1F829B64FBB00A57C6F /* TravelTypeCVC.swift */; };
 		630ED1FC29B6555500A57C6F /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630ED1FB29B6555500A57C6F /* CustomCollectionViewCell.swift */; };
+		635F2A6729B8A24B0008753E /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 635F2A6629B8A24B0008753E /* AlamofireImage */; };
+		635F2A6A29B8A2760008753E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 635F2A6929B8A2760008753E /* Alamofire */; };
+		635F2A6D29B8A3240008753E /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635F2A6C29B8A3240008753E /* CacheManager.swift */; };
 		AF0E0897298936FA006DB3AF /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0E0896298936FA006DB3AF /* UsersModel.swift */; };
 		AF1597102988FB0A006B65B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF15970F2988FB0A006B65B5 /* AppDelegate.swift */; };
 		AF1597122988FB0A006B65B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1597112988FB0A006B65B5 /* SceneDelegate.swift */; };
@@ -30,6 +33,7 @@
 /* Begin PBXFileReference section */
 		630ED1F829B64FBB00A57C6F /* TravelTypeCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTypeCVC.swift; sourceTree = "<group>"; };
 		630ED1FB29B6555500A57C6F /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		635F2A6C29B8A3240008753E /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		AF0E0896298936FA006DB3AF /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
 		AF15970C2988FB0A006B65B5 /* BelarusTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BelarusTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF15970F2988FB0A006B65B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 			files = (
 				AF15972E29892065006B65B5 /* FirebaseDatabase in Frameworks */,
 				AF15973029892065006B65B5 /* FirebaseStorage in Frameworks */,
+				635F2A6729B8A24B0008753E /* AlamofireImage in Frameworks */,
+				635F2A6A29B8A2760008753E /* Alamofire in Frameworks */,
 				AF15972A29892065006B65B5 /* FirebaseAnalytics in Frameworks */,
 				AF15972C29892065006B65B5 /* FirebaseAuth in Frameworks */,
 			);
@@ -67,6 +73,14 @@
 				630ED1FB29B6555500A57C6F /* CustomCollectionViewCell.swift */,
 			);
 			path = CustomCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		635F2A6B29B8A3040008753E /* CacheManager */ = {
+			isa = PBXGroup;
+			children = (
+				635F2A6C29B8A3240008753E /* CacheManager.swift */,
+			);
+			path = CacheManager;
 			sourceTree = "<group>";
 		};
 		AF0E0895298936B9006DB3AF /* Models */ = {
@@ -102,6 +116,7 @@
 				AF1597252988FBA9006B65B5 /* Controllers */,
 				630ED1FA29B6550900A57C6F /* CustomCollectionViewCell */,
 				AFBF1D362991803200ADE281 /* CustomSection */,
+				635F2A6B29B8A3040008753E /* CacheManager */,
 				AF1597242988FB8F006B65B5 /* Delegates */,
 				AF1597182988FB10006B65B5 /* Assets.xcassets */,
 				AF15971D2988FB10006B65B5 /* Info.plist */,
@@ -168,6 +183,8 @@
 				AF15972B29892065006B65B5 /* FirebaseAuth */,
 				AF15972D29892065006B65B5 /* FirebaseDatabase */,
 				AF15972F29892065006B65B5 /* FirebaseStorage */,
+				635F2A6629B8A24B0008753E /* AlamofireImage */,
+				635F2A6929B8A2760008753E /* Alamofire */,
 			);
 			productName = BelarusTravel;
 			productReference = AF15970C2988FB0A006B65B5 /* BelarusTravel.app */;
@@ -199,6 +216,8 @@
 			mainGroup = AF1597032988FB0A006B65B5;
 			packageReferences = (
 				AF15972829892065006B65B5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				635F2A6529B8A24B0008753E /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				635F2A6829B8A2760008753E /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = AF15970D2988FB0A006B65B5 /* Products */;
 			projectDirPath = "";
@@ -235,6 +254,7 @@
 				630ED1F929B64FBB00A57C6F /* TravelTypeCVC.swift in Sources */,
 				AFBF1D302991730F00ADE281 /* RegionModel.swift in Sources */,
 				AF1597102988FB0A006B65B5 /* AppDelegate.swift in Sources */,
+				635F2A6D29B8A3240008753E /* CacheManager.swift in Sources */,
 				AF0E0897298936FA006DB3AF /* UsersModel.swift in Sources */,
 				AF1597122988FB0A006B65B5 /* SceneDelegate.swift in Sources */,
 				AF56566A298ADB4F00A53F6D /* RegionTableViewController.swift in Sources */,
@@ -459,6 +479,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		635F2A6529B8A24B0008753E /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		635F2A6829B8A2760008753E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		AF15972829892065006B65B5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -470,6 +506,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		635F2A6629B8A24B0008753E /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 635F2A6529B8A24B0008753E /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+		635F2A6929B8A2760008753E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 635F2A6829B8A2760008753E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		AF15972929892065006B65B5 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AF15972829892065006B65B5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

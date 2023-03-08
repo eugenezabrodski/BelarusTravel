@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 private let reuseIdentifier = "Cell"
 
@@ -52,12 +54,13 @@ class TravelTypeCVC: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CustomCollectionViewCell
-        //regions[indexPath.section].travelType[indexPath.row]?.categoriesType?.nameType
-        //как сделать фон из фото по юрл?
-        cell.nameLabel.text = places?.place?.namePlace//region?.travelType[indexPath.item]?.place?.namePlace
-        //cell.fetchImage(url: region?.travelType[indexPath.row]?.categoriesType?.place?.placeId.photoURL)
+        cell.nameLabel.text = places?.place?.namePlace
+        let backgroundPhotoURL = places?.place?.photoURL
+        cell.backgroundPhotoUrl = backgroundPhotoURL
+        cell.backgroundView?.layer.cornerRadius = 50
         return cell
     }
+    
 
     // MARK: UICollectionViewDelegate
 
