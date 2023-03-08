@@ -14,23 +14,26 @@ struct Region: Codable {
     var travelType: [TravelType?]
 }
 
+//struct TravelType: Codable {
+  //  var categoriesType: CategoriesType?
+//}
+
 struct TravelType: Codable {
-    var categoriesType: CategoriesType?
-}
-
-struct CategoriesType: Codable {
-    var categoriesId: Int
     var nameType: String?
-    var typeId: TypeId?
+    var place: Place?
 }
 
-struct TypeId: Codable {
-    var nature: PlaceId?
-    var architecture: PlaceId?
-    var museum: PlaceId?
-}
+//struct CategoriesType: Codable {
+    //var categoriesId: Int
+    //var nameType: String?
+    //var place: Place?
+//}
 
-struct PlaceId: Codable {
+//struct Place: Codable {
+   // var placeId: PlaceId
+//}
+
+struct Place: Codable {
     var namePlace: String?
     var text: String?
     var coordinates: Coordinates?

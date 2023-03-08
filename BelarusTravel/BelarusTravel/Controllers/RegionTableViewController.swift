@@ -44,14 +44,13 @@ class RegionTableViewController: UITableViewController {
                     return 0
                 }
         return regions[section].travelType.count
-        //return regions[section].travelType.categoriesType!.categoriesId
+        //return region
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = regions[indexPath.section].travelType[indexPath.row]?.categoriesType?.nameType
-        //cell.textLabel?.text = regions[indexPath.section].travelType?.categoriesType?.nameType
+        cell.textLabel?.text = regions[indexPath.section].travelType[indexPath.row]?.nameType
         cell.backgroundView = UIImageView(image: #imageLiteral(resourceName: "backgroundcell"))
         return cell
     }
@@ -65,10 +64,11 @@ class RegionTableViewController: UITableViewController {
         }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let region = regions[indexPath.row]
+        //let region = regions[indexPath.row]
+        let region = regions[indexPath.section].travelType[indexPath.row]
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "TravelTypeCVC") as! TravelTypeCVC
-        vc.region = region
+        vc.places = region
         navigationController?.pushViewController(vc, animated: true)
         // Задать вопрос про тайп айди
     }
@@ -99,6 +99,7 @@ class RegionTableViewController: UITableViewController {
             
             do {
                 self?.regions = try JSONDecoder().decode([Region].self, from: data)
+                print(self?.regions)
             } catch {
                 print (error)
             }

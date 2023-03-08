@@ -11,9 +11,9 @@ private let reuseIdentifier = "Cell"
 
 class TravelTypeCVC: UICollectionViewController {
     
-    var region: Region?
+    //var region: Region?
     
-    
+    var places: TravelType?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class TravelTypeCVC: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -53,7 +53,9 @@ class TravelTypeCVC: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CustomCollectionViewCell
         //regions[indexPath.section].travelType[indexPath.row]?.categoriesType?.nameType
-        cell.nameLabel.text = region?.travelType[indexPath.row]?.categoriesType?.typeId?.nature?.namePlace
+        //как сделать фон из фото по юрл?
+        cell.nameLabel.text = places?.place?.namePlace//region?.travelType[indexPath.item]?.place?.namePlace
+        //cell.fetchImage(url: region?.travelType[indexPath.row]?.categoriesType?.place?.placeId.photoURL)
         return cell
     }
 
