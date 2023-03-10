@@ -20,13 +20,6 @@ class TravelTypeCVC: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
     }
 
     /*
@@ -57,7 +50,6 @@ class TravelTypeCVC: UICollectionViewController {
         cell.nameLabel.text = places?.place?.namePlace
         let backgroundPhotoURL = places?.place?.photoURL
         cell.backgroundPhotoUrl = backgroundPhotoURL
-        cell.backgroundView?.layer.cornerRadius = 50
         return cell
     }
     

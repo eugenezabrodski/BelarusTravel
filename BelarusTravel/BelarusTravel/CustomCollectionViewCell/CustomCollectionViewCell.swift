@@ -21,13 +21,15 @@ class CustomCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     
-    @IBOutlet weak var backgroundCell: UIImageView!
+
+
     
-    private func getImage() {
+    func getImage() {
         guard let backgroundPhotoUrl = backgroundPhotoUrl else { return }
         
         self.getPhoto(imageURL: backgroundPhotoUrl) { [weak self] image, error in
-            self?.backgroundCell.image = image
+            self?.backgroundView = UIImageView(image: image)
+            // и здесь же можно использовать корнер радиус??
         }
     }
     
@@ -36,12 +38,12 @@ class CustomCollectionViewCell: UICollectionViewCell {
         if let image = CacheManager.shared.imageCache.image(withIdentifier: imageURL) {
             callback(image, nil)
         } else {
-            AF.request(imageURL).responseImage { response in
-                if case .success(let image) = response.result {
-                    
-                    CacheManager.shared.imageCache.add(image, withIdentifier: imageURL)
-                    callback(image, nil)
-                }
+           AF.request(imageURL).responseImage { response in
+               if case .success(let image) = response.result {
+
+                   CacheManager.shared.imageCache.add(image, withIdentifier: imageURL)
+                   callback(image, nil)
+             }
             }
         }
     }
