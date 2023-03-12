@@ -8,6 +8,7 @@
 import UIKit
 import Alamofire
 import AlamofireImage
+import SwiftUI
 
 private let reuseIdentifier = "Cell"
 
@@ -21,23 +22,6 @@ class TravelTypeCVC: UICollectionViewController {
         super.viewDidLoad()
 
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    // MARK: UICollectionViewDataSource
-
-    //override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-      //  return 1
-    //}
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -53,7 +37,16 @@ class TravelTypeCVC: UICollectionViewController {
         return cell
     }
     
-
+    
+    @IBSegueAction func toInformationView(_ coder: NSCoder, sender: Any?) -> UIViewController? {
+        
+        guard let indexPath = collectionView.indexPathsForSelectedItems else {
+            return nil
+        }
+        let place = places
+        return UIHostingController(coder: coder, rootView: InformationView(place: place))
+    }
+    
     // MARK: UICollectionViewDelegate
 
     /*

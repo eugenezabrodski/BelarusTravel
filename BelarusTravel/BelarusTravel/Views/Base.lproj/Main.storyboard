@@ -202,6 +202,7 @@
                                 <size key="customSize" width="390" height="200"/>
                                 <connections>
                                     <outlet property="nameLabel" destination="rFW-Pe-84d" id="kRt-ZG-OJQ"/>
+                                    <segue destination="H5g-CH-qiY" kind="show" destinationCreationSelector="toInformationView:sender:" id="9Ju-Xu-PDP"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -214,6 +215,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7dB-rG-xF7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2397.2093023255816" y="47.639484978540779"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Rih-19-tJj">
+            <objects>
+                <tabBarController id="lzV-Jt-GAR" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="u6t-zy-Tle"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="uUW-Dc-n7d">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemYellowColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="H5g-CH-qiY" kind="relationship" relationship="viewControllers" id="oFw-fG-L4U"/>
+                        <segue destination="8ma-Jy-fj7" kind="relationship" relationship="viewControllers" id="Cw4-L6-dte"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qWc-KH-fGH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3368" y="274"/>
+        </scene>
+        <!--Как добраться?-->
+        <scene sceneID="q7s-WU-IDY">
+            <objects>
+                <viewController id="8ma-Jy-fj7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0rM-mx-wLJ">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Id7-Mh-NCp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Как добраться?" image="map" catalog="system" id="V6f-hw-qDW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LQY-Yy-EW2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4221" y="256"/>
+        </scene>
+        <!--Информация-->
+        <scene sceneID="5hX-M9-s2g">
+            <objects>
+                <hostingController id="H5g-CH-qiY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Информация" image="info.circle" catalog="system" id="wS4-pY-Gaf"/>
+                    <navigationItem key="navigationItem" id="GFW-t5-c3j"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z1C-A6-16W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4221" y="-382"/>
         </scene>
         <!--Title-->
         <scene sceneID="1J2-Dg-gG9">
@@ -235,13 +283,21 @@
             <point key="canvasLocation" x="820" y="48"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="9Ju-Xu-PDP"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.left" catalog="system" width="128" height="104"/>
+        <image name="info.circle" catalog="system" width="128" height="123"/>
+        <image name="map" catalog="system" width="128" height="112"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
