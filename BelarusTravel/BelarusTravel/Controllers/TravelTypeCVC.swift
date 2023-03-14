@@ -37,15 +37,22 @@ class TravelTypeCVC: UICollectionViewController {
         return cell
     }
     
-    
-    @IBSegueAction func toInformationView(_ coder: NSCoder, sender: Any?) -> UIViewController? {
-        
-        guard let indexPath = collectionView.indexPathsForSelectedItems else {
-            return nil
-        }
-        let place = places
-        return UIHostingController(coder: coder, rootView: InformationView(place: place))
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "showTabBarController" else { return }
+        let tabBarViewController = segue.destination as! TabBarViewController
+        tabBarViewController.placeName = places
+        //let mealDetailVC = segue.destination as! MealDeatailViewController
     }
+    
+    
+//    @IBSegueAction func toInformationView(_ coder: NSCoder, sender: Any?) -> UIViewController? {
+//
+//        guard let indexPath = collectionView.indexPathsForSelectedItems else {
+//            return nil
+//        }
+//        let place = places
+//        return UIHostingController(coder: coder, rootView: InformationView(place: place))
+//    }
     
     // MARK: UICollectionViewDelegate
 

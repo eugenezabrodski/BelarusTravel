@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseStorage
 
 class RegionTableViewController: UITableViewController {
     
@@ -23,14 +21,6 @@ class RegionTableViewController: UITableViewController {
          
     }
     
-    @IBAction func logOut(_ sender: UIBarButtonItem) {
-        do {
-            try Auth.auth().signOut()
-            dismiss(animated: true, completion: nil)
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
     
 
     // MARK: - Table view data source
