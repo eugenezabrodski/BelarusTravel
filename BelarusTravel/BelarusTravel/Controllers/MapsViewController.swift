@@ -13,8 +13,9 @@ class MapsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.view.backgroundColor = .red
+        self.title?.removeAll()
+        // Как убрать кнопку назад?
+        self.view.backgroundColor = .gray
     }
     
 
