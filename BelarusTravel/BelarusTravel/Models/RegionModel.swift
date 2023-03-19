@@ -16,7 +16,7 @@ struct Region: Codable {
 
 struct TravelType: Codable {
     var nameType: String?
-    var place: Place?
+    var place: [Place?]
 }
 
 struct Place: Codable {

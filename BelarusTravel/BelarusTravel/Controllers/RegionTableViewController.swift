@@ -55,10 +55,11 @@ class RegionTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //let region = regions[indexPath.row]
-        let region = regions[indexPath.section].travelType[indexPath.row]
+        //let region = regions[indexPath.section].travelType[indexPath.row]
+        let region = regions[indexPath.section].travelType[indexPath.row]?.place
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "TravelTypeCVC") as! TravelTypeCVC
-        vc.places = region
+        vc.places = region as? [Place]
         navigationController?.pushViewController(vc, animated: true)
         // Задать вопрос про тайп айди
     }
@@ -89,7 +90,7 @@ class RegionTableViewController: UITableViewController {
             
             do {
                 self?.regions = try JSONDecoder().decode([Region].self, from: data)
-                print(self?.regions)
+                //print(self?.regions)
             } catch {
                 print (error)
             }

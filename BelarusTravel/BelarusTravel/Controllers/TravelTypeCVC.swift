@@ -16,7 +16,7 @@ class TravelTypeCVC: UICollectionViewController {
     
     //var region: Region?
     
-    var places: TravelType?
+    var places: [Place]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,28 +26,38 @@ class TravelTypeCVC: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // тут в базе данных надо создавать массив плэйсайди
-        return 1
+        return places?.count ?? 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CustomCollectionViewCell
-        cell.nameLabel.text = places?.place?.namePlace
-        let backgroundPhotoURL = places?.place?.photoURL
+        cell.nameLabel.text = places?[indexPath.row].namePlace
+        let backgroundPhotoURL = places?[indexPath.row].photoURL
         cell.backgroundPhotoUrl = backgroundPhotoURL
         return cell
     }
     
-//    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let region = regions[indexPath.section].travelType[indexPath.row]?.place
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "TravelTypeCVC") as! TravelTypeCVC
+//        vc.places = region as? [Place]
+        let place = places?[indexPath.row]
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let tabVC = storyboard.instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
+        tabVC.typePlace = place
 //        let dest = TabBarViewController(nibName: "TabBarViewController", bundle: nil)
-//        dest.placeName = places
-//        navigationController?.pushViewController(dest, animated: true)
-//    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "showTabBarController" else { return }
-        let tabBarViewController = segue.destination as! TabBarViewController
-        tabBarViewController.placeName = places
+//        dest.typePlace = places?[indexPath.row]
+        navigationController?.pushViewController(tabVC, animated: true)
     }
+    
+     //тут я закоментирую и удалю сегу и попробую через сториборд выше
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        //guard let indexPath = collectionView. else { return }
+//        guard segue.identifier == "showTabBarController" else { return }
+//        let tabBarViewController = segue.destination as! TabBarViewController
+//        tabBarViewController.typePlace = places
+//    }
     
     
     
@@ -69,12 +79,12 @@ class TravelTypeCVC: UICollectionViewController {
     }
     */
 
-    /*
+    
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         return true
     }
-    */
+    
 
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item

@@ -10,7 +10,8 @@ import SwiftUI
 
 class TabBarViewController: UITabBarController {
     
-    var placeName: TravelType?
+    //var placeName: TravelType?
+    var typePlace: Place?
     //let mapView = MapsViewController()
     //var informationVC = UIHostingController(rootView: InformationView())
 
@@ -26,9 +27,12 @@ class TabBarViewController: UITabBarController {
     
     private func createTabBar() -> [UIViewController] {
         var array = [UIViewController]()
+        //поменяй названия а и б
         let a = MapsViewController()
-        a.place = placeName
-        let b = UIHostingController(rootView: InformationView(place: placeName))
+        a.place = typePlace
+        //a.place = placeName
+        //let b = UIHostingController(rootView: InformationView(place: placeName))
+        let b = UIHostingController(rootView: InformationView(place: typePlace))
         array.append(b)
         array.append(a)
         return array

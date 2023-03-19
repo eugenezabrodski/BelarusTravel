@@ -77,7 +77,6 @@
                                 <size key="customSize" width="390" height="200"/>
                                 <connections>
                                     <outlet property="nameLabel" destination="rFW-Pe-84d" id="kRt-ZG-OJQ"/>
-                                    <segue destination="x0t-6S-oHb" kind="show" identifier="showTabBarController" id="St2-R6-NsL"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -94,7 +93,7 @@
         <!--Tab Bar View Controller-->
         <scene sceneID="xRF-JZ-E17">
             <objects>
-                <tabBarController id="x0t-6S-oHb" customClass="TabBarViewController" customModule="BelarusTravel" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="x0t-6S-oHb" customClass="TabBarViewController" customModule="BelarusTravel" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="uqZ-DG-kCP"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jHR-aF-hhU">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
