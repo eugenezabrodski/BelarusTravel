@@ -11,36 +11,34 @@ import CoreLocation
 
 class MapsViewController: UIViewController {
     
-    //var place: TravelType?
+    //MARK: - Properties
+    
     var place: Place?
+    
     let mapView: MKMapView = {
         let mapView = MKMapView()
         mapView.translatesAutoresizingMaskIntoConstraints = false
         return mapView
     }()
-//    var annotationsArray = [MKPointAnnotation]()
+    
     let locationManager = CLLocationManager()
-    //var currentRoute: MKRoute?
     var currentLat: Double = 0
     var currentLng: Double = 0
 
+    //MARK: - Life cicle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
-        //self.title?.removeAll()
         setConstrains()
-//        geoCoder()
         getCurrentLocation()
-//        createRoute(a: annotationsArray[0].coordinate, b: annotationsArray[1].coordinate)
     }
     
+    //MARK: - Methods
     
     private func getCurrentLocation() {
         self.locationManager.requestAlwaysAuthorization()
         self.locationManager.requestWhenInUseAuthorization()
-        //        locationManager.delegate = self
-        //        locationManager.requestWhenInUseAuthorization()
         DispatchQueue.global().async {
             if CLLocationManager.locationServicesEnabled() {
                 self.locationManager.delegate = self
@@ -48,20 +46,12 @@ class MapsViewController: UIViewController {
                 self.locationManager.startUpdatingLocation()
             }
         }
-        
-//        if CLLocationManager.locationServicesEnabled() {
-//            locationManager.delegate = self
-//            locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
-//            locationManager.startUpdatingLocation()
-//        }
     }
     
 
     
     private func geoCoder() {
         let geoCoder = CLGeocoder()
-//        guard let lat = Double(place?.place?.coordinates?.lat ?? "0.00"),
-//              let lng = Double(place?.place?.coordinates?.lng ?? "0.00") else { return }
         guard let lat = Double(place?.coordinates?.lat ?? "0.00"),
               let lng = Double(place?.coordinates?.lng ?? "0.00") else { return }
         let finalLocation = CLLocation(latitude: lat, longitude: lng)
@@ -74,21 +64,14 @@ class MapsViewController: UIViewController {
             let placemark = placemarks.first
             
             let annotation = MKPointAnnotation()
-            //annotation.title = "\(String(describing: self.place?.place?.namePlace))"
             annotation.title = "\(String(describing: self.place?.namePlace))"
             guard let placemarkLocation = placemark?.location else { return }
             annotation.coordinate = placemarkLocation.coordinate
             
             let annotationSecond = MKPointAnnotation()
             annotationSecond.coordinate = CLLocationCoordinate2D(latitude: currentLat, longitude: currentLng)
-            //annotationSecond.coordinate = placemarkLocation.coordinate
-//            annotationsArray.append(annotation)
-//            annotationsArray.append(annotationSecond)
             let annotationsArray = [annotation, annotationSecond]
             mapView.showAnnotations(annotationsArray, animated: true)
-            //mapView.centerLocation(finalLocation, regionRadius: 600000)
-            
-//            createRoute(a: annotationsArray[0].coordinate, b: annotationsArray[1].coordinate)
             createRoute(a: annotation.coordinate, b: annotationSecond.coordinate)
         }
     }
@@ -96,7 +79,6 @@ class MapsViewController: UIViewController {
  
     
     private func createRoute(a: CLLocationCoordinate2D, b: CLLocationCoordinate2D) {
-        
         
         let currentLocation = MKPlacemark(coordinate: a)
         let finalLocation = MKPlacemark(coordinate: b)
@@ -116,9 +98,7 @@ class MapsViewController: UIViewController {
                 return
             }
             let route = response.routes[0]
-            
-            //self.currentRoute = route
-            //self.mapView.removeOverlay(self.mapView.overlays as! MKOverlay)
+
             self.mapView.addOverlay(route.polyline)
         }
         
@@ -129,8 +109,6 @@ extension MapsViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
         print("\(locValue.latitude) \(locValue.longitude)")
-        //currentLat = locValue.latitude
-        //currentLng = locValue.longitude
         currentLat = 53.9
         currentLng = 27.5
         geoCoder()
@@ -159,10 +137,3 @@ extension MapsViewController {
         ])
     }
 }
-
-//extension MKMapView {
-//    func centerLocation(_ location: CLLocation, regionRadius: CLLocationDistance = 10000) {
-//        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
-//        setRegion(coordinateRegion, animated: true)
-//    }
-//}

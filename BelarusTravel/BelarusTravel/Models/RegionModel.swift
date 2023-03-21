@@ -7,6 +7,8 @@
 
 import UIKit
 
+//MARK: - Region
+
 struct Region: Codable {
     var regionId: Int
     var nameRegion: String?
@@ -14,10 +16,14 @@ struct Region: Codable {
     var travelType: [TravelType?]
 }
 
+//MARK: - TravelType
+
 struct TravelType: Codable {
     var nameType: String?
     var place: [Place?]
 }
+
+//MARK: - Place
 
 struct Place: Codable {
     var namePlace: String?
@@ -25,6 +31,8 @@ struct Place: Codable {
     var coordinates: Coordinates?
     var photoURL: String?
 }
+
+//MARK: - Coordinates
 
 struct Coordinates: Codable {
     let lat: String?

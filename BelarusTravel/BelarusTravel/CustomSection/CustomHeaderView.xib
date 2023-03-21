@@ -16,17 +16,17 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgV-84-CWh">
-                    <rect key="frame" x="20" y="0.0" width="42" height="81"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="20" y="0.0" width="46" height="81"/>
+                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2a-dD-83K">
-                    <rect key="frame" x="82" y="0.0" width="492" height="81"/>
+                    <rect key="frame" x="86" y="0.0" width="488" height="81"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain">
-                        <imageReference key="image" image="arrow.down" catalog="system" symbolScale="large"/>
-                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <imageReference key="image" image="arrow.down.circle" catalog="system" symbolScale="large"/>
+                        <color key="baseForegroundColor" red="0.28281946698975063" green="0.55971972229554479" blue="0.28844240093163048" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </buttonConfiguration>
                     <connections>
                         <action selector="actionButton:" destination="-2" eventType="touchUpInside" id="SJw-hf-1Iv"/>
@@ -53,6 +53,6 @@
         </view>
     </objects>
     <resources>
-        <image name="arrow.down" catalog="system" width="118" height="128"/>
+        <image name="arrow.down.circle" catalog="system" width="128" height="123"/>
     </resources>
 </document>

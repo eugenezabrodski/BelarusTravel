@@ -17,6 +17,7 @@
 		635F2A6D29B8A3240008753E /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635F2A6C29B8A3240008753E /* CacheManager.swift */; };
 		637478B329C11ABD004476B0 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637478B229C11ABD004476B0 /* TabBarViewController.swift */; };
 		637478B529C1228A004476B0 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637478B429C1228A004476B0 /* MapsViewController.swift */; };
+		637478B929CA05E1004476B0 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637478B829CA05E1004476B0 /* ApiConstants.swift */; };
 		AF1597102988FB0A006B65B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF15970F2988FB0A006B65B5 /* AppDelegate.swift */; };
 		AF1597122988FB0A006B65B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1597112988FB0A006B65B5 /* SceneDelegate.swift */; };
 		AF1597172988FB0A006B65B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1597152988FB0A006B65B5 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		635F2A6C29B8A3240008753E /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		637478B229C11ABD004476B0 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		637478B429C1228A004476B0 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		637478B829CA05E1004476B0 /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
 		AF15970C2988FB0A006B65B5 /* BelarusTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BelarusTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF15970F2988FB0A006B65B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF1597112988FB0A006B65B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			children = (
 				AFBF1D2F2991730F00ADE281 /* RegionModel.swift */,
 				631B244629BE3D2C00B4C48A /* WeatherData.swift */,
+				637478B829CA05E1004476B0 /* ApiConstants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				637478B929CA05E1004476B0 /* ApiConstants.swift in Sources */,
 				637478B529C1228A004476B0 /* MapsViewController.swift in Sources */,
 				631B244329BE360A00B4C48A /* InformationView.swift in Sources */,
 				630ED1FC29B6555500A57C6F /* CustomCollectionViewCell.swift in Sources */,

@@ -10,7 +10,9 @@ import Alamofire
 import AlamofireImage
 
 class CustomCollectionViewCell: UICollectionViewCell {
-    // Где колдовать на юай частью, а именно обрезать углы корнер радиус??
+    
+    //MARK: - Properties
+    
     var region: Region?
     
     var backgroundPhotoUrl: String? {
@@ -21,15 +23,14 @@ class CustomCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     
+    //MARK: - Methods
 
-
-    
     func getImage() {
         guard let backgroundPhotoUrl = backgroundPhotoUrl else { return }
         
         self.getPhoto(imageURL: backgroundPhotoUrl) { [weak self] image, error in
             self?.backgroundView = UIImageView(image: image)
-            // и здесь же можно использовать корнер радиус??
+            // Как скруглить ячейку
         }
     }
     

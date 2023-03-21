@@ -10,32 +10,28 @@ import SwiftUI
 
 class TabBarViewController: UITabBarController {
     
-    //var placeName: TravelType?
+    //MARK: - Properties
+    
     var typePlace: Place?
-    //let mapView = MapsViewController()
-    //var informationVC = UIHostingController(rootView: InformationView())
+ 
+    //MARK: - Life cicle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //let informationVC = UIHostingController(rootView: InformationView(place: placeName))
-        //self.mapView.place = placeName
-        //Как сделать нормально???
-        //self.viewControllers = [informationVC, mapView]
         self.viewControllers = createTabBar()
         setupUI()
     }
     
+    //MARK: - Methods
+    
     private func createTabBar() -> [UIViewController] {
-        var array = [UIViewController]()
-        //поменяй названия а и б
-        let a = MapsViewController()
-        a.place = typePlace
-        //a.place = placeName
-        //let b = UIHostingController(rootView: InformationView(place: placeName))
-        let b = UIHostingController(rootView: InformationView(place: typePlace))
-        array.append(b)
-        array.append(a)
-        return array
+        var arrayControllers = [UIViewController]()
+        let mapsVC = MapsViewController()
+        mapsVC.place = typePlace
+        let infoVC = UIHostingController(rootView: InformationView(place: typePlace))
+        arrayControllers.append(infoVC)
+        arrayControllers.append(mapsVC)
+        return arrayControllers
     }
     
     private func setupUI() {
@@ -56,19 +52,4 @@ class TabBarViewController: UITabBarController {
         self.viewControllers![1].tabBarItem = UITabBarItem(title: "Как добраться?", image: UIImage(systemName: "map"), tag: 1)
     }
     
-   
-    
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

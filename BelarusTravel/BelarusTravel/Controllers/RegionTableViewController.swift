@@ -9,20 +9,20 @@ import UIKit
 
 class RegionTableViewController: UITableViewController {
     
+    //MARK: - Properties
+    
     var regions: [Region] = []
     let headerID = String(describing: CustomHeaderView.self)
     
+    //MARK: - Life cicle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchUsers()
+        fetchRegions()
         tableViewConfig()
-        // сделай setUpUI
-        tableView.backgroundView = UIImageView(image: #imageLiteral(resourceName: "MEANWHILE"))
-         
+        setupUI()
     }
     
-    
-
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -34,14 +34,13 @@ class RegionTableViewController: UITableViewController {
                     return 0
                 }
         return regions[section].travelType.count
-        //return region
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = regions[indexPath.section].travelType[indexPath.row]?.nameType
-        cell.backgroundView = UIImageView(image: #imageLiteral(resourceName: "backgroundcell"))
+        cell.textLabel?.font = UIFont(name: "Noteworthy-Bold", size: 15)
         return cell
     }
     
@@ -53,21 +52,25 @@ class RegionTableViewController: UITableViewController {
         return header
         }
     
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+            return 80
+        }
+    
+    // MARK: - Table view delegate
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //let region = regions[indexPath.row]
-        //let region = regions[indexPath.section].travelType[indexPath.row]
         let region = regions[indexPath.section].travelType[indexPath.row]?.place
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "TravelTypeCVC") as! TravelTypeCVC
         vc.places = region as? [Place]
         navigationController?.pushViewController(vc, animated: true)
-        // Задать вопрос про тайп айди
     }
-        
-    //поиграйся с размерами
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-            return 80
-        }
+    
+    // MARK: - Methods
+    
+    private func setupUI() {
+        tableView.backgroundView = UIImageView(image: #imageLiteral(resourceName: "flower11"))
+    }
     
     
     private func tableViewConfig() {
@@ -76,10 +79,9 @@ class RegionTableViewController: UITableViewController {
             tableView.tableFooterView = UIView()
         }
 
-    // вынести в отдельный сервис
-    private func fetchUsers() {
-        //сделать апи констант
-        guard let url = URL(string: "http://localhost:3000/travel") else { return }
+
+    private func fetchRegions() {
+        guard let url = URL(string: ApiConstants.serverPath) else { return }
 
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
             if let error = error {
@@ -90,7 +92,6 @@ class RegionTableViewController: UITableViewController {
             
             do {
                 self?.regions = try JSONDecoder().decode([Region].self, from: data)
-                //print(self?.regions)
             } catch {
                 print (error)
             }
@@ -100,18 +101,15 @@ class RegionTableViewController: UITableViewController {
         }
         task.resume()
     }
-
-
-
 }
 
 extension RegionTableViewController: HeaderViewDelegate {
-func expandedSection(button: UIButton) {
-let section = button.tag
-
-let isExpanded = regions[section].isExpanded
-    regions[section].isExpanded = !isExpanded!
-
-tableView.reloadSections(IndexSet(integer: section), with: .automatic)
-}
+    
+    func expandedSection(button: UIButton) {
+        let section = button.tag
+        let isExpanded = regions[section].isExpanded
+        regions[section].isExpanded = !isExpanded!
+        
+        tableView.reloadSections(IndexSet(integer: section), with: .automatic)
+    }
 }
