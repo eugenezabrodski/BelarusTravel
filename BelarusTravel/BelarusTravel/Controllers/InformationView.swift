@@ -11,6 +11,7 @@ import CoreLocation
 struct InformationView: View {
     
     var place: Place?
+    @State var temperature: String = ""
     
     var body: some View {
         
@@ -29,7 +30,7 @@ struct InformationView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 Spacer(minLength: 20)
             HStack {
-                Text("Погода сегодня - \(temperature())")
+                Text("Погода сегодня: \(temperature)")
                     .bold()
                     .background(.teal)
                     .clipShape(RoundedRectangle(cornerRadius: 5))
@@ -39,23 +40,23 @@ struct InformationView: View {
                         .font(.subheadline)
                         .padding(10)
         }
+        .onAppear {
+            temperatureInfo()
+        }
     }
     
-    private func temperature() -> String {
-        var infoTemp = "123"
+    private func temperatureInfo() {
         let lat = Double(place?.coordinates?.lat ?? "0.00")
         let lng = Double(place?.coordinates?.lng ?? "0.00")
         WeatherManager.shared.sendRequest(coordinates: CLLocationCoordinate2D(latitude: lat!, longitude: lng!)) { weather  in
             DispatchQueue.main.async {
-                var text = ""
+                //var text = ""
                 if let weather = weather {
-                    text = " \(weather.main.temp) ощущается как: \(weather.main.feels_like)"
-                    infoTemp = text
+                    temperature = " \(weather.main.temp), ощущается как: \(weather.main.feels_like). Cкорость ветра: \(weather.wind.speed)"
                 }
             }
             
         }
-        return infoTemp
     }
 }
 

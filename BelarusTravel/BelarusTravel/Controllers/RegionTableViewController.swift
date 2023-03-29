@@ -78,18 +78,18 @@ class RegionTableViewController: UITableViewController {
             tableView.register(nib, forHeaderFooterViewReuseIdentifier: headerID)
             tableView.tableFooterView = UIView()
         }
-
-
+    
     private func fetchRegions() {
+
         guard let url = URL(string: ApiConstants.serverPath) else { return }
 
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
             if let error = error {
                 print(error)
             }
-            
+
             guard let data = data else { return }
-            
+
             do {
                 self?.regions = try JSONDecoder().decode([Region].self, from: data)
             } catch {

@@ -39,3 +39,4 @@ struct Coordinates: Codable {
     let lng: String?
 }
 
+
