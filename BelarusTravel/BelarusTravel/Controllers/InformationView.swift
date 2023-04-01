@@ -50,7 +50,6 @@ struct InformationView: View {
         let lng = Double(place?.coordinates?.lng ?? "0.00")
         WeatherManager.shared.sendRequest(coordinates: CLLocationCoordinate2D(latitude: lat!, longitude: lng!)) { weather  in
             DispatchQueue.main.async {
-                //var text = ""
                 if let weather = weather {
                     temperature = " \(weather.main.temp), ощущается как: \(weather.main.feels_like). Cкорость ветра: \(weather.wind.speed)"
                 }

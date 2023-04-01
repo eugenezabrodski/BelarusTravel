@@ -29,8 +29,10 @@ class TabBarViewController: UITabBarController {
         let mapsVC = MapsViewController()
         mapsVC.place = typePlace
         let infoVC = UIHostingController(rootView: InformationView(place: typePlace))
+        let hotelVC = HotelsViewController()
         arrayControllers.append(infoVC)
         arrayControllers.append(mapsVC)
+        arrayControllers.append(hotelVC)
         return arrayControllers
     }
     
@@ -50,6 +52,7 @@ class TabBarViewController: UITabBarController {
         roundLayer.fillColor = UIColor.gray.cgColor
         self.viewControllers![0].tabBarItem = UITabBarItem(title: "Информация", image: UIImage(systemName: "info.circle"), tag: 0)
         self.viewControllers![1].tabBarItem = UITabBarItem(title: "Как добраться?", image: UIImage(systemName: "map"), tag: 1)
+        self.viewControllers![2].tabBarItem = UITabBarItem(title: "Где отдохнуть?", image: UIImage(systemName: "map"), tag: 1)
     }
     
 }

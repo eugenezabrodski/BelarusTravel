@@ -22,6 +22,7 @@ class TravelTypeCVC: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
     }
     
     //MARK: - Collection view data source
@@ -44,6 +45,10 @@ class TravelTypeCVC: UICollectionViewController {
         let tabVC = storyboard.instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
         tabVC.typePlace = place
         navigationController?.pushViewController(tabVC, animated: true)
+    }
+    
+    private func setupUI() {
+        collectionView.backgroundView = UIImageView(image: #imageLiteral(resourceName: "flower11"))
     }
     
 
