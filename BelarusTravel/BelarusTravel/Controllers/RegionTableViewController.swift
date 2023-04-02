@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegionTableViewController: UITableViewController {
+final class RegionTableViewController: UITableViewController {
     
     //MARK: - Properties
     
@@ -40,7 +40,7 @@ class RegionTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = regions[indexPath.section].travelType[indexPath.row]?.nameType
-        cell.textLabel?.font = UIFont(name: "Noteworthy-Bold", size: 15)
+        cell.textLabel?.font = UIFont(name: "Marker Felt Wide", size: 15)
         return cell
     }
     

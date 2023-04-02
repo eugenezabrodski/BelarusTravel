@@ -8,11 +8,9 @@
 import UIKit
 import WebKit
 
-class HotelsViewController: UIViewController {
+final class HotelsViewController: UIViewController {
     
     var place: Place?
-    
-    var url = "https://101hotels.com/belarus/region/belovezhskaya_pushcha"
     
     let hotelView: WKWebView = {
         let hotelView = WKWebView()
@@ -29,7 +27,7 @@ class HotelsViewController: UIViewController {
     }
     
     private func createView() {
-        guard let url = URL(string: url) else { return }
+        guard let url = URL(string: place?.hotelURL ?? ApiConstants.hotelServerPath) else { return }
         let urlRequest = URLRequest(url: url)
         self.hotelView.load(urlRequest)
         self.hotelView.allowsBackForwardNavigationGestures = true

@@ -8,7 +8,7 @@
 import Foundation
 import CoreLocation
 
-class WeatherManager {
+final class WeatherManager {
     
     static let shared = WeatherManager()
     private init() {}

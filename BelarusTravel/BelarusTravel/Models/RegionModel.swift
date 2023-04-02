@@ -30,6 +30,7 @@ struct Place: Codable {
     var text: String?
     var coordinates: Coordinates?
     var photoURL: String?
+    var hotelURL: String?
 }
 
 //MARK: - Coordinates

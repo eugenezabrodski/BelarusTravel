@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapsViewController: UIViewController {
+final class MapsViewController: UIViewController {
     
     //MARK: - Properties
     

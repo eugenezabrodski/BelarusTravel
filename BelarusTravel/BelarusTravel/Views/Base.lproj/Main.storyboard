@@ -46,19 +46,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="C0e-Nh-k2t">
-                            <size key="itemSize" width="430" height="137"/>
-                            <size key="estimatedItemSize" width="400" height="200"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="safeArea" id="C0e-Nh-k2t">
+                            <size key="itemSize" width="390" height="137"/>
+                            <size key="estimatedItemSize" width="397" height="200"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="Cell" id="FxC-XY-dLs" customClass="CustomCollectionViewCell" customModule="BelarusTravel" customModuleProvider="target">
-                                <rect key="frame" x="20" y="20" width="390" height="200"/>
+                                <rect key="frame" x="0.0" y="20" width="430" height="137"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="66h-KB-h6o">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="200"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KI0-HO-Lhm">
+                                    <rect key="frame" x="0.0" y="0.0" width="430" height="137"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFW-Pe-84d">
@@ -70,11 +70,11 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rFW-Pe-84d" secondAttribute="trailing" constant="20" symbolic="YES" id="JTI-oE-rjG"/>
-                                        <constraint firstItem="rFW-Pe-84d" firstAttribute="top" secondItem="66h-KB-h6o" secondAttribute="top" constant="20" id="Tdc-X4-hD1"/>
-                                        <constraint firstItem="rFW-Pe-84d" firstAttribute="leading" secondItem="66h-KB-h6o" secondAttribute="leading" constant="20" id="mzy-s7-tFw"/>
+                                        <constraint firstItem="rFW-Pe-84d" firstAttribute="top" secondItem="KI0-HO-Lhm" secondAttribute="top" constant="20" id="Tdc-X4-hD1"/>
+                                        <constraint firstItem="rFW-Pe-84d" firstAttribute="leading" secondItem="KI0-HO-Lhm" secondAttribute="leading" constant="20" id="mzy-s7-tFw"/>
                                     </constraints>
                                 </collectionViewCellContentView>
-                                <size key="customSize" width="390" height="200"/>
+                                <size key="customSize" width="430" height="137"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="20"/>

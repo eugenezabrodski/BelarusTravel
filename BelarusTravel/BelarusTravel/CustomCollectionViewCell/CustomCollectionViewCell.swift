@@ -30,7 +30,6 @@ class CustomCollectionViewCell: UICollectionViewCell {
         
         self.getPhoto(imageURL: backgroundPhotoUrl) { [weak self] image, error in
             self?.backgroundView = UIImageView(image: image)
-            // Как скруглить ячейку
         }
     }
     

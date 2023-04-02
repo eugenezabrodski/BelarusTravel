@@ -12,7 +12,7 @@ import SwiftUI
 
 private let reuseIdentifier = "Cell"
 
-class TravelTypeCVC: UICollectionViewController {
+final class TravelTypeCVC: UICollectionViewController {
     
     //MARK: - Properties
     
