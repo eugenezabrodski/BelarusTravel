@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class RegionTableViewController: UITableViewController {
+class RegionTableViewController: UITableViewController {
     
     //MARK: - Properties
     

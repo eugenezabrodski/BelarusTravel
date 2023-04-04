@@ -12,7 +12,7 @@ import SwiftUI
 
 private let reuseIdentifier = "Cell"
 
-final class TravelTypeCVC: UICollectionViewController {
+class TravelTypeCVC: UICollectionViewController {
     
     //MARK: - Properties
     
@@ -48,7 +48,8 @@ final class TravelTypeCVC: UICollectionViewController {
     }
     
     private func setupUI() {
-        collectionView.backgroundView = UIImageView(image: #imageLiteral(resourceName: "flower11"))
+        collectionView.backgroundView = UIImageView(image: #imageLiteral(resourceName: "flower12"))
+        
     }
     
 

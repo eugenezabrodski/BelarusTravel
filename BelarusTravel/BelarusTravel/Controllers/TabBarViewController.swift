@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-final class TabBarViewController: UITabBarController {
+class TabBarViewController: UITabBarController {
     
     //MARK: - Properties
     
