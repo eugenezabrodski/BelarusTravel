@@ -7,23 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630ED1F929B64FBB00A57C6F /* TravelTypeCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630ED1F829B64FBB00A57C6F /* TravelTypeCVC.swift */; };
+		630ED1FC29B6555500A57C6F /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630ED1FB29B6555500A57C6F /* CustomCollectionViewCell.swift */; };
+		631B244329BE360A00B4C48A /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631B244229BE360A00B4C48A /* InformationView.swift */; };
+		631B244729BE3D2C00B4C48A /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631B244629BE3D2C00B4C48A /* WeatherData.swift */; };
+		631B244929BE3E2300B4C48A /* WheatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631B244829BE3E2300B4C48A /* WheatherManager.swift */; };
+		634108CD29D8938500E4851B /* HotelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634108CC29D8938500E4851B /* HotelsViewController.swift */; };
+		635F2A6729B8A24B0008753E /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 635F2A6629B8A24B0008753E /* AlamofireImage */; };
+		635F2A6A29B8A2760008753E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 635F2A6929B8A2760008753E /* Alamofire */; };
+		635F2A6D29B8A3240008753E /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635F2A6C29B8A3240008753E /* CacheManager.swift */; };
+		637478B329C11ABD004476B0 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637478B229C11ABD004476B0 /* TabBarViewController.swift */; };
+		637478B529C1228A004476B0 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637478B429C1228A004476B0 /* MapsViewController.swift */; };
+		637478B929CA05E1004476B0 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637478B829CA05E1004476B0 /* ApiConstants.swift */; };
+		63E3D5AE29D06E79009617A9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63E3D5AD29D06E79009617A9 /* GoogleService-Info.plist */; };
 		AF1597102988FB0A006B65B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF15970F2988FB0A006B65B5 /* AppDelegate.swift */; };
 		AF1597122988FB0A006B65B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1597112988FB0A006B65B5 /* SceneDelegate.swift */; };
-		AF1597142988FB0A006B65B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1597132988FB0A006B65B5 /* ViewController.swift */; };
 		AF1597172988FB0A006B65B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1597152988FB0A006B65B5 /* Main.storyboard */; };
 		AF1597192988FB10006B65B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF1597182988FB10006B65B5 /* Assets.xcassets */; };
 		AF15971C2988FB10006B65B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF15971A2988FB10006B65B5 /* LaunchScreen.storyboard */; };
+		AF56566A298ADB4F00A53F6D /* RegionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF565669298ADB4F00A53F6D /* RegionTableViewController.swift */; };
+		AFBF1D302991730F00ADE281 /* RegionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBF1D2F2991730F00ADE281 /* RegionModel.swift */; };
+		AFBF1D3A299181ED00ADE281 /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBF1D39299181ED00ADE281 /* CustomHeaderView.swift */; };
+		AFBF1D3E2991A71F00ADE281 /* CustomHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFBF1D3D2991A71F00ADE281 /* CustomHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		630ED1F829B64FBB00A57C6F /* TravelTypeCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTypeCVC.swift; sourceTree = "<group>"; };
+		630ED1FB29B6555500A57C6F /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		631B244229BE360A00B4C48A /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		631B244629BE3D2C00B4C48A /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		631B244829BE3E2300B4C48A /* WheatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheatherManager.swift; sourceTree = "<group>"; };
+		634108CC29D8938500E4851B /* HotelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelsViewController.swift; sourceTree = "<group>"; };
+		635F2A6C29B8A3240008753E /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		637478B229C11ABD004476B0 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		637478B429C1228A004476B0 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		637478B829CA05E1004476B0 /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
+		63E3D5AD29D06E79009617A9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AF15970C2988FB0A006B65B5 /* BelarusTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BelarusTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF15970F2988FB0A006B65B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF1597112988FB0A006B65B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AF1597132988FB0A006B65B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AF1597162988FB0A006B65B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF1597182988FB10006B65B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF15971B2988FB10006B65B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF15971D2988FB10006B65B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF565669298ADB4F00A53F6D /* RegionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionTableViewController.swift; sourceTree = "<group>"; };
+		AFBF1D2F2991730F00ADE281 /* RegionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionModel.swift; sourceTree = "<group>"; };
+		AFBF1D39299181ED00ADE281 /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
+		AFBF1D3D2991A71F00ADE281 /* CustomHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,12 +61,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635F2A6729B8A24B0008753E /* AlamofireImage in Frameworks */,
+				635F2A6A29B8A2760008753E /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		630ED1FA29B6550900A57C6F /* CustomCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				630ED1FB29B6555500A57C6F /* CustomCollectionViewCell.swift */,
+			);
+			path = CustomCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		635F2A6B29B8A3040008753E /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				635F2A6C29B8A3240008753E /* CacheManager.swift */,
+				631B244829BE3E2300B4C48A /* WheatherManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		AF0E0895298936B9006DB3AF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AFBF1D2F2991730F00ADE281 /* RegionModel.swift */,
+				631B244629BE3D2C00B4C48A /* WeatherData.swift */,
+				637478B829CA05E1004476B0 /* ApiConstants.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		AF1597032988FB0A006B65B5 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +115,58 @@
 		AF15970E2988FB0A006B65B5 /* BelarusTravel */ = {
 			isa = PBXGroup;
 			children = (
-				AF15970F2988FB0A006B65B5 /* AppDelegate.swift */,
-				AF1597112988FB0A006B65B5 /* SceneDelegate.swift */,
-				AF1597132988FB0A006B65B5 /* ViewController.swift */,
-				AF1597152988FB0A006B65B5 /* Main.storyboard */,
+				AF0E0895298936B9006DB3AF /* Models */,
+				AF1597232988FB7C006B65B5 /* Views */,
+				AF1597252988FBA9006B65B5 /* Controllers */,
+				630ED1FA29B6550900A57C6F /* CustomCollectionViewCell */,
+				AFBF1D362991803200ADE281 /* CustomSection */,
+				635F2A6B29B8A3040008753E /* Managers */,
+				AF1597242988FB8F006B65B5 /* Delegates */,
 				AF1597182988FB10006B65B5 /* Assets.xcassets */,
-				AF15971A2988FB10006B65B5 /* LaunchScreen.storyboard */,
 				AF15971D2988FB10006B65B5 /* Info.plist */,
+				63E3D5AD29D06E79009617A9 /* GoogleService-Info.plist */,
 			);
 			path = BelarusTravel;
+			sourceTree = "<group>";
+		};
+		AF1597232988FB7C006B65B5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF1597152988FB0A006B65B5 /* Main.storyboard */,
+				AF15971A2988FB10006B65B5 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AF1597242988FB8F006B65B5 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				AF15970F2988FB0A006B65B5 /* AppDelegate.swift */,
+				AF1597112988FB0A006B65B5 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		AF1597252988FBA9006B65B5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF565669298ADB4F00A53F6D /* RegionTableViewController.swift */,
+				630ED1F829B64FBB00A57C6F /* TravelTypeCVC.swift */,
+				637478B229C11ABD004476B0 /* TabBarViewController.swift */,
+				631B244229BE360A00B4C48A /* InformationView.swift */,
+				637478B429C1228A004476B0 /* MapsViewController.swift */,
+				634108CC29D8938500E4851B /* HotelsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AFBF1D362991803200ADE281 /* CustomSection */ = {
+			isa = PBXGroup;
+			children = (
+				AFBF1D39299181ED00ADE281 /* CustomHeaderView.swift */,
+				AFBF1D3D2991A71F00ADE281 /* CustomHeaderView.xib */,
+			);
+			path = CustomSection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +185,10 @@
 			dependencies = (
 			);
 			name = BelarusTravel;
+			packageProductDependencies = (
+				635F2A6629B8A24B0008753E /* AlamofireImage */,
+				635F2A6929B8A2760008753E /* Alamofire */,
+			);
 			productName = BelarusTravel;
 			productReference = AF15970C2988FB0A006B65B5 /* BelarusTravel.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +217,10 @@
 				Base,
 			);
 			mainGroup = AF1597032988FB0A006B65B5;
+			packageReferences = (
+				635F2A6529B8A24B0008753E /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				635F2A6829B8A2760008753E /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = AF15970D2988FB0A006B65B5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,7 +235,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFBF1D3E2991A71F00ADE281 /* CustomHeaderView.xib in Resources */,
 				AF15971C2988FB10006B65B5 /* LaunchScreen.storyboard in Resources */,
+				63E3D5AE29D06E79009617A9 /* GoogleService-Info.plist in Resources */,
 				AF1597192988FB10006B65B5 /* Assets.xcassets in Resources */,
 				AF1597172988FB0A006B65B5 /* Main.storyboard in Resources */,
 			);
@@ -138,9 +250,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF1597142988FB0A006B65B5 /* ViewController.swift in Sources */,
+				637478B929CA05E1004476B0 /* ApiConstants.swift in Sources */,
+				637478B529C1228A004476B0 /* MapsViewController.swift in Sources */,
+				631B244329BE360A00B4C48A /* InformationView.swift in Sources */,
+				634108CD29D8938500E4851B /* HotelsViewController.swift in Sources */,
+				630ED1FC29B6555500A57C6F /* CustomCollectionViewCell.swift in Sources */,
+				AFBF1D3A299181ED00ADE281 /* CustomHeaderView.swift in Sources */,
+				630ED1F929B64FBB00A57C6F /* TravelTypeCVC.swift in Sources */,
+				AFBF1D302991730F00ADE281 /* RegionModel.swift in Sources */,
 				AF1597102988FB0A006B65B5 /* AppDelegate.swift in Sources */,
+				635F2A6D29B8A3240008753E /* CacheManager.swift in Sources */,
 				AF1597122988FB0A006B65B5 /* SceneDelegate.swift in Sources */,
+				AF56566A298ADB4F00A53F6D /* RegionTableViewController.swift in Sources */,
+				631B244929BE3E2300B4C48A /* WheatherManager.swift in Sources */,
+				637478B329C11ABD004476B0 /* TabBarViewController.swift in Sources */,
+				631B244729BE3D2C00B4C48A /* WeatherData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,11 +414,12 @@
 				DEVELOPMENT_TEAM = JQSUXNGVC5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BelarusTravel/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Для работы требуется текущая геопозиция";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +429,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -318,11 +443,12 @@
 				DEVELOPMENT_TEAM = JQSUXNGVC5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BelarusTravel/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Для работы требуется текущая геопозиция";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,7 +458,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +484,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		635F2A6529B8A24B0008753E /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		635F2A6829B8A2760008753E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		635F2A6629B8A24B0008753E /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 635F2A6529B8A24B0008753E /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+		635F2A6929B8A2760008753E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 635F2A6829B8A2760008753E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF1597042988FB0A006B65B5 /* Project object */;
 }

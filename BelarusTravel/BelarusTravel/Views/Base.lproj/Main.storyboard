@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Re1-dI-10P">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Region Table View Controller-->
+        <scene sceneID="f3G-sG-Egh">
+            <objects>
+                <tableViewController id="0fK-I9-zG9" customClass="RegionTableViewController" customModule="BelarusTravel" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="2oq-5u-ft4">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="mFt-Wd-kmd">
+                                <rect key="frame" x="0.0" y="50" width="430" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mFt-Wd-kmd" id="iFe-J7-c4S">
+                                    <rect key="frame" x="0.0" y="0.0" width="430" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0fK-I9-zG9" id="Btn-To-nK4"/>
+                            <outlet property="delegate" destination="0fK-I9-zG9" id="Ceu-Eo-yzh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="sJw-fC-0lD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="93B-wF-WnD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1614" y="48"/>
+        </scene>
+        <!--Travel TypeCVC-->
+        <scene sceneID="sX4-oN-UBt">
+            <objects>
+                <collectionViewController storyboardIdentifier="TravelTypeCVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="x1u-Hp-1vk" customClass="TravelTypeCVC" customModule="BelarusTravel" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" dataMode="prototypes" id="9RS-dm-rfy">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="safeArea" id="C0e-Nh-k2t">
+                            <size key="itemSize" width="390" height="137"/>
+                            <size key="estimatedItemSize" width="397" height="200"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="Cell" id="FxC-XY-dLs" customClass="CustomCollectionViewCell" customModule="BelarusTravel" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="430" height="137"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KI0-HO-Lhm">
+                                    <rect key="frame" x="0.0" y="0.0" width="430" height="137"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFW-Pe-84d">
+                                            <rect key="frame" x="20" y="85" width="46" height="32"/>
+                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="rFW-Pe-84d" secondAttribute="bottom" constant="20" id="0Ef-0e-hJ7"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rFW-Pe-84d" secondAttribute="trailing" constant="20" symbolic="YES" id="AEt-kz-bDF"/>
+                                        <constraint firstItem="rFW-Pe-84d" firstAttribute="leading" secondItem="KI0-HO-Lhm" secondAttribute="leading" constant="20" symbolic="YES" id="CYG-zP-m4j"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="430" height="137"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="nameLabel" destination="rFW-Pe-84d" id="kRt-ZG-OJQ"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="x1u-Hp-1vk" id="cB5-Ak-k6V"/>
+                            <outlet property="delegate" destination="x1u-Hp-1vk" id="uly-fK-pqQ"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7dB-rG-xF7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2397.2093023255816" y="47.639484978540779"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="xRF-JZ-E17">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="x0t-6S-oHb" customClass="TabBarViewController" customModule="BelarusTravel" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="uqZ-DG-kCP"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jHR-aF-hhU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4sp-LW-AY3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3253" y="48"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="1J2-Dg-gG9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Re1-dI-10P" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="qFS-u9-lcL"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="M2l-34-mhx">
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0fK-I9-zG9" kind="relationship" relationship="rootViewController" id="70k-7J-Yij"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GoM-ov-yg5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="820" y="48"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

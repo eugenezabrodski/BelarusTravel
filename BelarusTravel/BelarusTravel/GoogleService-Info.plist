@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>568853521344-m2cbh81ml6272jkif6mpg0h1n0gamdfm.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.568853521344-m2cbh81ml6272jkif6mpg0h1n0gamdfm</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCGX2uSt2oHHuo_6ZsdKECKoz_nOE_-j0A</string>
+	<key>GCM_SENDER_ID</key>
+	<string>568853521344</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>EugeneZabrodski.BelarusTravel</string>
+	<key>PROJECT_ID</key>
+	<string>database-f9fe9</string>
+	<key>STORAGE_BUCKET</key>
+	<string>database-f9fe9.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:568853521344:ios:2ad34b5492e1e59aa29e25</string>
+	<key>DATABASE_URL</key>
+	<string>https://database-f9fe9-default-rtdb.europe-west1.firebasedatabase.app</string>
+</dict>
+</plist>
